@@ -1,0 +1,303 @@
+\documentclass{beamer}
+\usetheme{Berkeley}
+
+\title{The silicon photomultiplier}
+\author{Stefan Gundacker and Arjan Heering}
+  
+\institute{Presented: by Yannick Prianon,\\ Jonas Berggren, Anna Dunz}
+
+\begin{document}
+
+%what is SiPM
+%how does it work: parameters
+
+%quality quantities
+  %equation: SPTR, PDE
+%errors
+
+%analog vs. digital
+%application
+%prospect
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{P.O.O.}
+\begin{frame}
+\frametitle{SPAD: Principles of operation}
+  \begin{itemize}
+    \item p-n diode
+    \item 3 regimes:
+    \begin{enumerate}
+      \item simple e-h creation through impact ionization
+      \item secondary ionization by e
+      \item secondary ionization by e and h (quenching needed)
+    \end{enumerate}
+    \item e ionization is more sensitive
+    \item n-on-p for red
+    \item p-on-n for blue
+  \end{itemize}
+  %TODO: fig 1, 2, 3
+\end{frame}
+
+\begin{frame}
+  \frametitle{electrical equivalent circuit of the SPAD}
+  \begin{itemize}
+    \item 
+  \end{itemize}
+\end{frame}
+
+\section{Parameters}
+\begin{frame}
+  \frametitle{Breakdown voltage and multiplication gain}
+  \begin{itemize}
+    \item breakdown voltage
+      \[\int_0^W\alpha_ne^{-\int_0^x(\alpha_n-\alpha_p)dx'}dx=1\]
+    \item $V_{bd}$ is more advantageous for thin depletion regions
+    \item
+      \[Gain=\frac{avalanche\_charge}{q}=\frac{V_{ov}(C_q+C_d)}{q}\]
+    \item gain gives signal well above noise for $q=e$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{$V_{bd}$}
+  \begin{itemize}
+    \item measuring the gain as a function of $V_{bias}$.
+    \item find the derivative
+  \end{itemize}
+  %sec 3.2
+\end{frame}
+
+\begin{frame}
+  \frametitle{temperature dependence of parameters}
+  \begin{itemize}
+    \item $V_{bd}$ increases with $T$
+    \item gain increases with lower $T$
+    \item DCR increases with $T$
+  \end{itemize}
+\end{frame}
+
+
+\section{Quality measures}
+\begin{frame}
+  \frametitle{PDE}
+  \begin{itemize}
+    \item 
+      \[PDE(V_{ov},\lambda)=QE(\lambda)P_T(V_{ov},\lambda)FF_{eff}(V_{ov},\lambda)\]
+  \end{itemize}
+  %eq. 12
+\end{frame}
+
+\begin{frame}
+  \frametitle{SPTR}
+  \begin{itemize}
+    \item 
+      \[\sigma_{timing}=\frac{\sigma_{v_{voise}}}{dv/dt_{@threshhold}}\]
+  \end{itemize}
+\end{frame}
+
+\section{error sources}
+\begin{frame}
+  \frametitle{error sources}
+  \begin{itemize}
+    \item DCR
+    \begin{itemize}
+      \item $\propto\frac{1}{T}$
+      \item residue at cryo. temperature: trap assisted tunneling
+    \end{itemize}
+    \item after pulse:
+    \begin{itemize}
+      \item release of trapped charges in high field regions
+      \item mitigation: slow recharge rate
+      \item secondary photons
+      \item mitigation: low life time substrate
+    \end{itemize}
+  \end{itemize}
+  %fig 5
+\end{frame}
+
+\begin{frame}
+  \frametitle{Crosstalk}
+  \begin{itemize}
+    \item photons arising from one cell triggering a signal in an other cell
+    \item Mitigation: optical trenches
+    \item delay cross talk
+    \item Mitigation: reduce undepleted region thickness
+    \item external crosstalk: emission of secondary photons producing reflection on "the window"
+    \item Delayed vs. prompt cross talk.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Excess noise factor}
+  \begin{itemize}
+    \item Expectation: $N_{phe}\pm\sqrt{N_{phe}}$
+    \item we define
+      \[ENF=\frac{(\sigma_Q/<Q>)^2}{(\sigma_{Q_N}/<Q_N>)^2}\]
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Saturation}
+  \begin{itemize}
+    \item trade of between saturation and dead space
+      \[N_{fired}=N_{total}\left(1-e^{-\frac{N_{photon}PDE\cdot ENF}{N_{total}}}\right)\]
+  \end{itemize}
+\end{frame}
+
+\section{Digital SiPM}
+
+%Jonas
+\begin{frame}
+  \frametitle{digital SiPM}
+  \begin{itemize}
+    \item each cell has it's own read out
+    \item high data production
+    \item compromise: small SiPM arrays
+  \end{itemize}
+\end{frame}
+
+\section{Applications}
+%Jonas
+\begin{frame}
+  \frametitle{Applications}
+  \begin{itemize}
+    \item TOF-PET
+    \item PET-MR
+    \item SPECT/MR
+    \item HEP
+      \begin{itemize}
+        \item Problem: High radiation environment
+      \end{itemize}
+    \item LIDAR
+    \item Scintillation detection
+      \begin{itemize}
+        \item Cherenkov in scintillator
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\section{Prospect}
+%Jonas
+\begin{frame}
+  \frametitle{Prospect}
+  \begin{itemize}
+    \item Digital will become more prevalent
+  \end{itemize}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\begin{frame}
+%  \frametitle{}
+%  \begin{itemize}
+%    \item 
+%  \end{itemize}
+%\end{frame}
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Abbreviations}
+  \begin{itemize}
+    \item SiPM: Silicon photomultiplier
+    \item SSPM: solid state photmultiplier
+    \item MPPC: multi pixel photon counter
+    \item SPAD: single photon avalanche diode
+    \item SPTR: single photon time resolution
+    \item PDE: photon detector efficiency
+    \item PMT: photo multiplier tube
+    \item TCAD: technology computer aided design
+    \item DCR: dark count rate
+    \item LTE: light transfer efficiency
+    \item PTS: photon transfer time spread
+  \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Abstract}
+  \begin{itemize}
+    \item What is SiPM and what is it use for
+    \item What are relevant qualitative parameters for best application specific performance
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{introduction}
+  \begin{itemize}
+    \item Analog vs. Digital SiPM
+    \item $10-100\mu m$ wide
+    \item single photon sensitivity
+    \item ps timing resolution
+    \item applications:
+    \begin{itemize}
+      \item TOF-PET
+      \item LIDAR
+      \item dark matter
+      \item double $\beta$
+      \item HEP
+      \item much more
+    \end{itemize}
+  \end{itemize}
+  %fig 6
+\end{frame}
+
+\begin{frame}
+  \frametitle{electronic read out}
+  \begin{itemize}
+    \item high gain
+    \item high power consumption
+    \item strong and fast amplifier
+  \end{itemize}
+  %sec. 3.9
+\end{frame}
+
+\begin{frame}
+  \frametitle{Analog SiPM}
+  \begin{itemize}
+    \item large array of SPADS in parallel
+    \item Counting photons via integration over charge
+    \item individual SPADS interact via capacitance
+  \end{itemize}
+  %sec. 3.1
+  %eq. 3, 4?
+\end{frame}
+\end{document}

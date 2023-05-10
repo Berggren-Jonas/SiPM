@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{P.O.O.}{2}{0}{1}
+\beamer@sectionintoc {2}{Parameters}{4}{0}{2}
+\beamer@sectionintoc {3}{Quality measures}{7}{0}{3}
+\beamer@sectionintoc {4}{error sources}{9}{0}{4}
+\beamer@sectionintoc {5}{Digital SiPM}{13}{0}{5}
+\beamer@sectionintoc {6}{Applications}{14}{0}{6}
+\beamer@sectionintoc {7}{Prospect}{15}{0}{7}
